@@ -14,7 +14,7 @@
     }
 }
 
-.t-home__graphics-img {
+.t-home__graphics-svg {
     margin-top: 20px;
     flex-shrink: 0;
     height: 300px;
@@ -22,7 +22,7 @@
 }
 
 @media screen and (min-width: 600px) {
-    .t-home__graphics-img {
+    .t-home__graphics-svg {
         margin-top: 0;
         height: 80vh;
     }
