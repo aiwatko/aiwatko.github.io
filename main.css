@@ -46,7 +46,7 @@
 }
   
 .t-home__link,.t-home__link:hover, .t-home__link:active, .t-home__link:visited {
-    color: #00AFB2;
+    color: rgb(148, 0, 57);
     text-decoration: none;
   }
   
