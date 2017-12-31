@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiwatko/oktawiakata.com.git"
+  },
+  "author": "Oktawia Kata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aiwatko/oktawiakata.com/issues"
+  },
+  "homepage": "https://github.com/aiwatko/oktawiakata.com#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
