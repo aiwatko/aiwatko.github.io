@@ -64,16 +64,18 @@ body {
 }
 
 .t-home {
-    padding: 4%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        text-align: left;
+        align-items: center;    
+    }
+
+    &__graphics {
+        text-align: right;
     }
 
     &__graphics-svg {
@@ -94,12 +96,14 @@ body {
         font-family: 'Dancing Script', cursive;
         
         @media screen and (min-width: 768px) {
-            font-size: calc(30px + (60-30)*(100vw - 400px)/(2500-400));
+            font-size: calc(40px + (70-40)*(100vw - 400px)/(2500-400));
         }        
     }
 
     &__subtitle {
-        font-size: calc(15px + (20-15)*(100vw - 400px)/(2500-400));
+        font-size: calc(20px + (30-20)*(100vw - 400px)/(2500-400));
         font-family: 'Montserrat', sans-serif;
+        line-height: 1.2;
+        margin: 0 0 2% 0 ;
     }
 }
