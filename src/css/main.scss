@@ -1,6 +1,6 @@
 @import 'normalize';
 $black: #151515;
-$linkcolorlight: #e3c54e;
+$linkcolorlight: #D4AF37;
 $linkcolordark: #0fa4c6;
 
 html, 
@@ -61,6 +61,7 @@ body {
 }
 
 .t-home {
+    position: relative;
     padding: 5%;
     height: 100%;
     display: flex;
@@ -69,6 +70,22 @@ body {
     @media screen and (min-width: 768px) {
         align-items: center;
     } 
+
+    &__graphics {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        &-svg {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            fill: transparent;
+            stroke: #D4AF37;
+        }
+    }
 
     &__title {
         font-size: 50px;
