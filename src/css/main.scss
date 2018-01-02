@@ -1,6 +1,6 @@
 @import 'normalize';
 $black: #151515;
-$linkcolorlight: #dea0a6;
+$linkcolorlight: #e3c54e;
 $linkcolordark: #0fa4c6;
 
 html, 
@@ -11,7 +11,7 @@ body {
 body {
     background-color:white;
     color: $black;
-    transition: all .7s;
+    transition: all 1s;
 
     .t-home__link {
         color: $linkcolordark;
@@ -25,7 +25,7 @@ body {
         }
     }
     
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 768px) {
         background-color: $black;
         color: white;
 
@@ -65,20 +65,23 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    } 
 
     &__title {
-        font-size: 35px;
+        font-size: 50px;
         margin: 20px 0;
         font-family: 'Dancing Script', cursive;
         
         @media screen and (min-width: 768px) {
-            font-size: calc(40px + (70 - 40) * (100vw - 400px) / (2500 - 400));
+            font-size: calc(50px + (100 - 50) * (100vw - 400px) / (2500 - 400));
         }        
     }
 
     &__subtitle {
-        font-size: calc(20px + (30 - 20) * (100vw - 400px) / (2500 - 400));
+        font-size: calc(20px + (45 - 20) * (100vw - 400px) / (2500 - 400));
         font-family: 'Montserrat', sans-serif;
         line-height: 1.2;
         margin: 0 0 2% 0 ;
