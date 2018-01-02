@@ -73,12 +73,12 @@ body {
         font-family: 'Dancing Script', cursive;
         
         @media screen and (min-width: 768px) {
-            font-size: calc(40px + (70-40)*(100vw - 400px)/(2500-400));
+            font-size: calc(40px + (70 - 40) * (100vw - 400px) / (2500 - 400));
         }        
     }
 
     &__subtitle {
-        font-size: calc(20px + (30-20)*(100vw - 400px)/(2500-400));
+        font-size: calc(20px + (30 - 20) * (100vw - 400px) / (2500 - 400));
         font-family: 'Montserrat', sans-serif;
         line-height: 1.2;
         margin: 0 0 2% 0 ;
