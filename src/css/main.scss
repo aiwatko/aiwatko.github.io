@@ -14,13 +14,13 @@ body {
     transition: all 1s;
 
     .t-home__link {
-        color: $linkcolordark;
+        color: $linkcolorlight;
         text-decoration: none;
 
         &:hover, 
         &:active,
         &:visited {
-            color: $linkcolordark;
+            color: $linkcolorlight;
             text-decoration: none;
         }
     }
@@ -47,13 +47,13 @@ body {
         color: $black;
 
         .t-home__link {
-            color: $linkcolordark;
+            color: $linkcolorlight;
             text-decoration: none;
     
             &:hover, 
             &:active,
             &:visited {
-                color: $linkcolordark;
+                color: $linkcolorlight;
                 text-decoration: none;
             }
         }
@@ -73,6 +73,7 @@ body {
 
     &__graphics {
         position: absolute;
+        overflow: hidden;
         top: 0;
         height: 100%;
         width: 100%;
