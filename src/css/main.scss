@@ -1,7 +1,6 @@
 @import 'normalize';
 $black: #151515;
 $linkcolorlight: #D4AF37;
-$linkcolordark: #0fa4c6;
 
 html, 
 body {
@@ -64,12 +63,12 @@ body {
     position: relative;
     padding: 5%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
 
-    @media screen and (min-width: 768px) {
-        align-items: center;
-    } 
+    // @media screen and (min-width: 768px) {
+    //     align-items: center;
+    // } 
 
     &__graphics {
         position: absolute;
@@ -88,20 +87,38 @@ body {
         }
     }
 
-    &__title {
-        font-size: 50px;
-        margin: 20px 0;
-        font-family: 'Dancing Script', cursive;
-        
-        @media screen and (min-width: 768px) {
-            font-size: calc(50px + (100 - 50) * (100vw - 400px) / (2500 - 400));
-        }        
+    &__bio {
+        &-title {
+            font-size: 50px;
+            margin: 20px 0;
+            font-family: 'Dancing Script', cursive;
+            
+            @media screen and (min-width: 768px) {
+                font-size: calc(50px + (100 - 50) * (100vw - 400px) / (2500 - 400));
+            }        
+        }
+    
+        &-text {
+            font-size: calc(20px + (45 - 20) * (100vw - 400px) / (2500 - 400));
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.2;
+            margin: 0 0 3% 0 ;
+        }
     }
 
-    &__subtitle {
-        font-size: calc(20px + (45 - 20) * (100vw - 400px) / (2500 - 400));
-        font-family: 'Quicksand', sans-serif;
-        line-height: 1.2;
-        margin: 0 0 3% 0 ;
+    &__work {
+        &-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        &-project {
+            background: $linkcolorlight;
+            color: white;
+        }
     }
+
+
 }

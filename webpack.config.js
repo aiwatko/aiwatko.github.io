@@ -2,6 +2,8 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+// var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 var extractPlugin = new ExtractTextPlugin({
    filename: 'main.css'
@@ -43,7 +45,7 @@ module.exports = {
                 use: ['html-loader']
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpg|png|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -64,5 +66,8 @@ module.exports = {
             template: 'src/index.html'
         }),
         // new CleanWebpackPlugin(['www.oktawiakata.com'])
+        // new BundleAnalyzerPlugin({
+        //     openAnalyzer: false,
+        // })
     ]
 };
