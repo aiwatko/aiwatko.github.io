@@ -115,8 +115,14 @@ body {
         }
 
         &-project {
-            background: $linkcolorlight;
+            border: 1px solid $linkcolorlight;
             color: white;
+        }
+
+        &-img {
+            height: 100%;
+            width: auto;
+            stroke: $linkcolorlight;
         }
     }
 
