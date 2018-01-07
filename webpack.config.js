@@ -12,7 +12,8 @@ module.exports = {
     entry: './src/js/app.js',
     // Where and which files are created
     output: {
-        path: path.resolve(__dirname, 'www.oktawiakata.com'),
+        // path: path.resolve(__dirname, 'www.oktawiakata.com'),
+        path: path.resolve(__dirname),
         filename: 'bundle.js',
     },
     module: {
@@ -60,6 +61,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CleanWebpackPlugin(['www.oktawiakata.com'])
+        // new CleanWebpackPlugin(['www.oktawiakata.com'])
     ]
 };
