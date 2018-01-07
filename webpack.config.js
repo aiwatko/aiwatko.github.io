@@ -9,7 +9,8 @@ var extractPlugin = new ExtractTextPlugin({
 // We need to export our webpack configuration
 module.exports = {
     // Where webpack starts analyzing the project
-    entry: './src/js/app.js',
+    entry: ['./src/css/main.scss', './src/js/app.js'],
+
     // Where and which files are created
     output: {
         // path: path.resolve(__dirname, 'www.oktawiakata.com'),
@@ -31,11 +32,12 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: extractPlugin.extract({
-                // Webpack executes loaders in the reverse order                     
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
+                use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  // Webpack executes loaders in the reverse order 
+                  use: ['css-loader', 'postcss-loader', 'sass-loader']
+                }),
+              },
             {
                 test: /\.html$/,
                 use: ['html-loader']

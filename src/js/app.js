@@ -1,4 +1,4 @@
-import '../css/main.scss';
+// import '../css/main.scss';
 
 const classes = {
     smallCircle: 't-home__small-circle',
