@@ -12,7 +12,7 @@ module.exports = {
     entry: './src/js/app.js',
     // Where and which files are created
     output: {
-        path: path.resolve(__dirname),
+        path: path.resolve(__dirname, 'www.oktawiakata.com'),
         filename: 'bundle.js',
     },
     module: {
@@ -60,6 +60,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        // new CleanWebpackPlugin(['public_html'])
+        new CleanWebpackPlugin(['www.oktawiakata.com'])
     ]
 };
