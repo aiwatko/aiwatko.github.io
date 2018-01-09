@@ -15,8 +15,8 @@ module.exports = {
 
     // Where and which files are created
     output: {
-        // path: path.resolve(__dirname, 'www.oktawiakata.com'),
-        path: path.resolve(__dirname),
+        path: path.resolve(__dirname, 'dist'),
+        // path: path.resolve(__dirname),
         filename: 'bundle.js',
     },
     module: {
@@ -65,7 +65,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        // new CleanWebpackPlugin(['www.oktawiakata.com'])
+        new CleanWebpackPlugin(['dist'])
         // new BundleAnalyzerPlugin({
         //     openAnalyzer: false,
         // })
