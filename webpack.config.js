@@ -1,22 +1,22 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
-var extractPlugin = new ExtractTextPlugin({
+const extractPlugin = new ExtractTextPlugin({
    filename: 'main.css'
 });
-// We need to export our webpack configuration
+
 module.exports = {
     // Where webpack starts analyzing the project
-    entry: ['./src/css/main.scss', './src/js/app.js'],
+    entry: ['./src/css/main.scss', './src/js/app.js', './src/img/icon.png'],
 
     // Where and which files are created
     output: {
         path: path.resolve(__dirname, 'dist'),
-        // path: path.resolve(__dirname),
         filename: 'bundle.js',
     },
     module: {
@@ -39,14 +39,10 @@ module.exports = {
                   // Webpack executes loaders in the reverse order 
                   use: ['css-loader', 'postcss-loader', 'sass-loader']
                 }),
-              },
+            },
             {
                 test: /\.html$/,
                 use: ['html-loader']
-            },
-            {
-                test: /\.json$/,
-                loader: 'json-loader'
             },
             {
                 test: /\.(jpg|png|svg)$/,
@@ -69,9 +65,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
         // new BundleAnalyzerPlugin({
         //     openAnalyzer: false,
         // })
+        new CopyWebpackPlugin([
+        { 
+            from: path.resolve(__dirname, './src/resources/manifest.json'), 
+            to: './'
+        },
+        ]),
     ]
 };
