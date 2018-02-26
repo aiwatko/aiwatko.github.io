@@ -45,6 +45,10 @@ module.exports = {
                 use: ['html-loader']
             },
             {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+            {
                 test: /\.(jpg|png|svg)$/,
                 use: [
                     {
